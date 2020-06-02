@@ -31,5 +31,14 @@ public class FloatType {
 		System.out.println(d);
 		d = 2e-3; // 2*10^-3 ==> 0.002
 		System.out.println(d);
+		
+		// 실수 표현의 한계
+		double d1 = 0.1;
+		double d2 = 0.2;
+		double d3 = d1 + d2; // 결과가 0.30000000000000004 이 나옴
+		// 10진법으로 쓴 0.1은 2진법의 한계상 완전히 들어맞는 값이 아닌 근사값이 나오게 됨 
+		
+		System.out.println(d3);
+		
 	}
 }
