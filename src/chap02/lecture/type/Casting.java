@@ -40,7 +40,6 @@ public class Casting {
 		// 걱정할 건 없고 컴파일러가 알아서 잡아줌
 		
 		
-		
 		System.out.println(b3);
 		
 		
