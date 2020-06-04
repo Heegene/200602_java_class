@@ -11,5 +11,8 @@ public class DenyLogicOperatorExample {
 		play = !play;
 		System.out.println(play); // true 
 		
+		
+		
+		
 	}
 }
