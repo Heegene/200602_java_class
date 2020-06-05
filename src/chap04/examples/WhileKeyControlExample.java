@@ -17,7 +17,7 @@ public class WhileKeyControlExample {
 			}
 			keyCode = System.in.read();
 			
-			if (keyCode == 49) { // 1을 입력하는 경우
+			if (keyCode == 49) { // 1을 입력하는 경우 49,13,10 따란 
 				speed++; // speed를 1 증가시킴 
 				System.out.println("현재 속도=" + speed); // 현재 speed 값 출력
 			} else if (keyCode == 50) { // 2를 입력하는 경우
