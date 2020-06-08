@@ -17,5 +17,6 @@ public class backjoon_10950 {
 			System.out.println(A+B);
 		}			
 		
+		
 	}
 }
