@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Exercise09 {
 	public static void main(String[] args) {
-		boolean run = true;
-		int studentNum = 0;
-		int[] scores = null;
-		Scanner sc = new Scanner(System.in);
+		boolean run = true; // while 을 돌리기 위해 boolean true 줌
+		int studentNum = 0; // 사용자로부터 입력받을 유저의 수
+		int[] scores = null; // scores 초기화
+		Scanner sc = new Scanner(System.in); // 입력받을 scanner 기능선언
 		int max = 0;
 		double avg = 0;
 		int sum = 0;
 
-		while (run) {
+		while (run) { // 디폴트는 run 상태로
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("1. 학생수 | 2. 점수입력 | 3. 점수 리스트 | 4. 분석 | 5. 종료");
 			System.out.println("---------------------------------------------------------------");
