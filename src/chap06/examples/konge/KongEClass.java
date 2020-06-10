@@ -45,7 +45,7 @@ public class KongEClass {
 	}
 	
 	int cashpayment(int a) { // 현금결제 내용 
-		this.balance += (a*1.1);
+		this.balance += (a*1.1); // 10% 추가충전 부분
 		return balance;
 	}
 	
@@ -54,8 +54,5 @@ public class KongEClass {
 		return balance;
 	}
 	
-	String[] bannedlist(String ...a) { // 재입장 관련 내용(mathrandom 해서 발생한 이벤트가 있으면 event 에 true값 들어갔음)
-		
-	}
 	
 }

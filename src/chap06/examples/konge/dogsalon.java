@@ -29,6 +29,10 @@ public class dogsalon {
 			int selectNo = sc.nextInt();
 
 			if (selectNo == 1) {
+				if (balance == 0) {
+					System.out.println(dogname + " 보호자님 ..  마일리지가 없으세요 ...저희 샵은 고품격 회.원.제 선.불.이.세.요^^..");
+					continue;
+				}
 				System.out.println("저희 샵에 " + dogname + "를(을) 맡겨주셔서 감사합니다. 디자인을 선택해 주세요.");
 				System.out.println("1. 곰돌이컷 : 70,000원  |  2. 백숙컷 : 45,000원  |  3. 닭발 미용 : 15,000원 ");
 				System.out.println("선택 >");
@@ -37,6 +41,7 @@ public class dogsalon {
 				switch (designSelect) {
 				
 				case 1: balance = kong.bearcut();
+				
 						if (kong.event) {
 							bannedlist[bannedlistSize] = dogname;
 							bannedlistSize++;
@@ -96,15 +101,15 @@ public class dogsalon {
 				// 재입장
 				System.out.println("재입장 도와드리겠습니다. 강아지 이름을 알려주세요.");
 				System.out.println("강아지 이름>");
-				String dogname2 = sc.nextLine(); // list에 올라간 이름과의 대조를 위해
+				String dogname2 = sc.next(); // list에 올라간 이름과의 대조를 위해
 				// 사용자가 이름 재입력 
 				
 				for (int i=0; i<bannedlistSize; i++) { // bannedlistSize만큼 반복
 					
 					boolean a = bannedlist[i].equals(dogname2); // 
 					if (a) {
-						System.out.println("입장이 제한되었습니다.");
-						run = false; 
+						System.out.println(dogname2 + " 는 입질이 워낙 심한 강아지라서요 . . 저희샵에서 지향하는 바와는 달라 함께 할 수 없네요.");
+					
 					}
 					
 				}
