@@ -7,7 +7,7 @@ public class Car {
 	
 	// 생성자
 	Car(String model) {
-		this.model = model;
+		this.model = model; // this 로 지정해 주지 않으면 컴파일 에러 발생 
 	}
 	
 	
