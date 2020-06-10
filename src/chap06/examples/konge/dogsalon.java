@@ -3,10 +3,12 @@ package chap06.examples.konge;
 import java.util.Scanner;
 
 public class dogsalon {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		int balance = 0;
 		KongEClass kong = new KongEClass();
 		Scanner sc = new Scanner(System.in);
+		String[] bannedlist = new String[100];
+		int bannedlistSize = 0;
 
 		boolean run = true;
 		System.out.println("안녕하세요 애견미용 푸들푸들 입니다.");
@@ -34,13 +36,28 @@ public class dogsalon {
 				
 				switch (designSelect) {
 				
-				case 1: System.out.println("곰돌이컷");
+				case 1: balance = kong.bearcut();
+						if (kong.event) {
+							bannedlist[bannedlistSize] = dogname;
+							bannedlistSize++;
+						}
+						System.out.println("곰돌이컷을 한 귀여운 모습의 "+dogname+"이(가) 나왔습니다.");
 						break;
 				
-				case 2: System.out.println("백숙컷");
+				case 2: balance = kong.chickencut();
+						System.out.println("곰돌이컷을 한 귀여운 모습의 "+dogname+"이(가) 나왔습니다.");
+						if (kong.event) {
+							bannedlist[bannedlistSize] = dogname;
+							bannedlistSize++;
+						}
 						break;
 				
-				case 3: System.out.println("닭발 미용");
+				case 3: balance = kong.chickenlegcut();
+						System.out.println("곰돌이컷을 한 귀여운 모습의 "+dogname+"이(가) 나왔습니다.");
+						if (kong.event) {
+							bannedlist[bannedlistSize] = dogname;
+							bannedlistSize++;
+						}
 						break;
 				
 				}
@@ -50,12 +67,48 @@ public class dogsalon {
 				
 			} else if (selectNo == 2) {
 				// 마일리지 충전관련
+				System.out.println("마일리지 충전 도와드리겠습니다.");
+				System.out.println("저희 샵은 탈세를 통한 이득을 고객님과 나누고 있습니다.");
+				System.out.println("현금으로 결제하시면 10% 추가 충전을 해 드리는데 어떻게 결제하시겠어요?");
+				System.out.println("1. 현금결제  | 2. 카드결제 ");
+				System.out.println("선택 >");
+				int chargeSelect = sc.nextInt();
+				
+				switch (chargeSelect) {
+				case 1: // 현금충전 메소드 실행
+						System.out.println("현금 적립 도와드리겠습니다*^^*");
+						System.out.println("얼마를 충전하시겠습니까?");
+						balance = kong.cashpayment(sc.nextInt());
+						
+						break;
+				case 2: // 카드충전 메소드 실행 
+						System.out.println("아..카드요..네...도와드리겠습니다..");
+						System.out.println("다음부터는 가급적 현금결제 부탁드려요^^");
+						System.out.println("얼마 충전하실건가요?");
+						balance = kong.cardpayment(sc.nextInt()); 
+						break; 
+				}
 
 			} else if (selectNo == 3) {
 				// 잔액 확인
 				System.out.println("마일리지 잔액은 " + balance + " 원 입니다.");
 			} else if (selectNo == 4) {
 				// 재입장
+				System.out.println("재입장 도와드리겠습니다. 강아지 이름을 알려주세요.");
+				System.out.println("강아지 이름>");
+				String dogname2 = sc.nextLine(); // list에 올라간 이름과의 대조를 위해
+				// 사용자가 이름 재입력 
+				
+				for (int i=0; i<bannedlistSize; i++) { // bannedlistSize만큼 반복
+					
+					boolean a = bannedlist[i].equals(dogname2); // 
+					if (a) {
+						System.out.println("입장이 제한되었습니다.");
+						run = false; 
+					}
+					
+				}
+//				
 			} else if (selectNo == 5) {
 				// 나가기
 				System.out.println("프로그램 종료");
