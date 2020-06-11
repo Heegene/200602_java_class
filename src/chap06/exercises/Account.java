@@ -3,9 +3,9 @@ package chap06.exercises;
 
 public class Account {
 
-	public int balance;
-	final static int MIN_BALANCE = 0;
-	final static int MAX_BALANCE = 1000000;
+	private int balance; // private으로 하는 게 좋음 
+	private final static int MIN_BALANCE = 0;
+	private final static int MAX_BALANCE = 1000000;
 
 	public int getBalance() {
 		return balance;

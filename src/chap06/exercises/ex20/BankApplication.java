@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class BankApplication {
 
-	private static Account[] accountArray = new Account[100]; // accoutn 배열에 메모리 100개 할당
+	private static Account[] accountArray = new Account[100];  
+	// account 배열 만들고 account가 100개 저장될 수 있는 공간 메모리에 할당 
+	// accountArray.method() 로 호출
 
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -44,6 +46,8 @@ public class BankApplication {
 
 	}
 
+	
+	
 	private static void creatAccount() {
 		// 계좌생성
 		System.out.println("계좌생성 메뉴입니다.");
@@ -59,10 +63,16 @@ public class BankApplication {
 
 		for (int i = 0; i < accountArray.length; i++) {
 			if (accountArray[i] == null) {
-				accountArray[i] = new Account(ano, owner, balance);
+				accountArray[i] = new Account(ano, owner, balance); // accountArray[i] 번째에 account를 넣어주는것 
 				break;
 			}
 
+			// 이렇게도 가능
+			// 위에 int size = 0; 해놓고
+//			accountArray[size] = account;
+//			size++; 
+//			이런식으로도 가능 
+			
 		}
 
 	}
