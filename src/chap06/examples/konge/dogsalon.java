@@ -109,7 +109,11 @@ public class dogsalon {
 					boolean a = bannedlist[i].equals(dogname2); // 
 					if (a) {
 						System.out.println(dogname2 + " 는 입질이 워낙 심한 강아지라서요 . . 저희샵에서 지향하는 바와는 달라 함께 할 수 없네요.");
-					
+						System.out.println("죄송하지만 나가주셨으면 합니다 . . 저희 디자이너분이 물리셔서요 . . ");
+						System.out.println("쫓겨났습니다. ");
+						run=false;
+						
+						
 					}
 					
 				}
