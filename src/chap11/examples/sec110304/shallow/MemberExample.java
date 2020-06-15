@@ -8,6 +8,13 @@ public class MemberExample {
 		
 		Member original = new Member("Blue", "홍길동", "12345", 25, true); 
 		
+		Member cloned = original.getMember();
+		
+		cloned.password = "67890";
+		
+		System.out.println(" ");
+		
+		
 		
 	}
 

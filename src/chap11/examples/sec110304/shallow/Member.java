@@ -6,7 +6,7 @@ public class Member implements Cloneable { // 복제할 수 있다는 표시
 	public String name;
 	public String password;
 	public int age;
-	public boolean adult;
+	public boolean adult; // 5개의 필드가 있음 
 	
 	public Member(String id, String name, String password, int age, boolean adult) {
 		this.id = id;
