@@ -15,7 +15,8 @@ public class StudentExample {
 		// new student("1")로 점수를 읽어옴
 		String score = hashMap.get(new Student("1"));
 		System.out.println("1번 학생의 총점 = " + score);
-		
+		// 1번 학생의 총점 = 95 출력 
+
 		
 	}
 	
