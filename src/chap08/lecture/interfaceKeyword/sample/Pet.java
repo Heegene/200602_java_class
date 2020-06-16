@@ -1,4 +1,4 @@
-package chap08.lecture.interfaceKeyword;
+package chap08.lecture.interfaceKeyword.sample;
 
 public interface Pet {
 	// Class가 아니라 interface라는 이름이 작성됨

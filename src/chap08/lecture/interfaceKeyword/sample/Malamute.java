@@ -1,4 +1,4 @@
-package chap08.lecture.interfaceKeyword;
+package chap08.lecture.interfaceKeyword.sample;
 
 public class Malamute extends KindaDog implements Pet, SledDog { // 인터페이스 받는 건 implements+인터페이스명 
 	// Kindadog extends하면 추상메소드 howl 구현해야함 

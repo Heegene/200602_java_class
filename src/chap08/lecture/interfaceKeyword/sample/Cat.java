@@ -1,4 +1,4 @@
-package chap08.lecture.interfaceKeyword;
+package chap08.lecture.interfaceKeyword.sample;
 
 public class Cat extends KindaCat implements Pet {
 	public void cry() {

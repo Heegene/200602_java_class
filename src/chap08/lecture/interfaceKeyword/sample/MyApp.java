@@ -1,4 +1,4 @@
-package chap08.lecture.interfaceKeyword;
+package chap08.lecture.interfaceKeyword.sample;
 
 public class MyApp {
 	public static void main(String[] args) {
