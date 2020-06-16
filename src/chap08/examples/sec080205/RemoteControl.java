@@ -21,5 +21,7 @@ public interface RemoteControl {
 			System.out.println("음소거 해제");
 		}
 	}
+	
+	static void changeBattery() {};
 
 }
