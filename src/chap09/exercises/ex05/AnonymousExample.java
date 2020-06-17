@@ -14,14 +14,14 @@ public class AnonymousExample {
 			}
 		}
 				
-				
-				
-				
-				
 				);
 		
+		// lamda 식 표현(java)
+		ano.method2(() -> System.out.println("버스가 달립니다"));
+		// javascript에서는 arrow-function 이라고 해서 이런식으로 사용
 		
-
+		
 	}
 
+	
 }
