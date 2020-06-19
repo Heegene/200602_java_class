@@ -8,12 +8,10 @@ class array_from_the_back {
 	
 	array_from_the_back test = new array_from_the_back();
 //	System.out.println(test.solution(n)); 이렇게 하면 원하지 않는 값이 나타남 
+
 	
 	int[] array = test.solution(n);
 	System.out.println(Arrays.toString(array));
-		
-		
-		
 	}
 	
     public int[] solution(long n) {
@@ -28,7 +26,6 @@ class array_from_the_back {
 					n /= 10;
 					count++;
 				}
-				
 				
 				return answer;
     }

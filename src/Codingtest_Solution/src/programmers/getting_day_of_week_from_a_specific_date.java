@@ -4,12 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class year_2016 {
+public class getting_day_of_week_from_a_specific_date {
 
 	public static void main(String[] args) {
 
 		try {
-			System.out.println(getDateDay("20200618", "yyyyMMdd"));
+			System.out.println(getDateDay("20200618", "yyyyMMdd")); // 입력 형식은 ("원하는 날짜", "날짜 형식" 입니다.
+			// 주의하실 점은, 날짜 형식 중 연도는 YYYY가 아닌 yyyy로 기재하여 주셔야 하고, 월은 대문자 M, 일은 소문자 d로 해 주시면 됩니다. 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
